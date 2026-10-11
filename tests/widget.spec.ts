@@ -8,7 +8,7 @@ test.describe('Uchi.ru widget ', () => {
     widgetPage = new WidgetPage(page);
 
     // open uchi.ru main page
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
 
     const cookieButton = page.locator('._UCHI_COOKIE__button').first();
     if (await cookieButton.isVisible()) {
