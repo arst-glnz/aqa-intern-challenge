@@ -10,7 +10,7 @@ test.describe('Uchi.ru widget ', () => {
     // open uchi.ru main page
     await page.goto('/');
 
-    const cookieButton = page.locator('._UCHI_COOKIE__button');
+    const cookieButton = page.locator('._UCHI_COOKIE__button').first();
     if (await cookieButton.isVisible()) {
       await cookieButton.click();
     }
